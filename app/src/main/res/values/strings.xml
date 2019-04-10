@@ -1,0 +1,96 @@
+<resources>
+    <!--
+    <string name="app_name">ChatApplication</string>
+-->
+    <string name="app_name">ChatApp</string>
+    <string name="need_a_new_account">NEED A NEW ACCOUNT ?</string>
+    <string name="display_name">Display Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="create_account">Sign Up</string>
+    <string name="log_out">Log Out</string>
+    <string name="mobileValidation">Please Enter Valid Mobile No</string>
+    <string name="passwordValidationlogin">Please Enter Password</string>
+    <string name="okay">Ok</string>
+
+
+
+    <string name="my_string">Not a member?</string>
+    <string name="my_string1">Sign up now.</string>
+
+    <string name="your_string"><u>Sign up now.</u></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_status">Hi there, I\'m using Chat App</string>
+    <string name="mobileno">Mobile No</string>
+    <string name="title_activity_nav">NavActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="login_to_your_account">Login to your Account</string>
+    <string name="ui_no_password_toast">no</string>
+    <string name="cancel">Cancel</string>
+    <string name="Ok">OK</string>
+    <string name="write_something">Write something</string>
+    <string name="title_activity_edit_name">Enter your name</string>
+    <string name="you_send_messages">you_send_messages</string>
+    <string name="type_msg">type_msg</string>
+    <string name="add_to_you_contact">add_to_you_contact</string>
+    <string name="search_">search_</string>
+    <string name="directory_sent">directory_sent</string>
+    <string name="camera_permission">Camera Permission</string>
+    <string name="audio_permission">Audio Permission</string>
+    <string name="storage_permission">Storage Permission</string>
+    <string name="contacts_permission">Contacts Permission</string>
+    <string name="vibrate_permission">Vibrate Permission</string>
+    <string name="receive_sms_permission">Receive sms Permission</string>
+    <string name="read_sms_permission">Read sms Permission</string>
+    <string name="call_phone_permission">Call Phone Permission</string>
+    <string name="get_accounts_permission">Get accounts Permission</string>
+    <string name="write_sync_settings_permission">Get accounts Permission</string>
+    <string name="read_sync_settings_permission">Get accounts Permission</string>
+    <string name="camera_permission_message">Camera permission allows you to take pictures and capture videos. Please allow in App Settings for additional functionality.</string>
+    <string name="record_audio_permission_message">Record audio permission allows you to  record audios. Please allow in App Settings for additional functionality.</string>
+    <string name="settings_audio_permission_message">Modify audio permission allows us access to your audios. Please allow in App Settings for additional functionality.</string>
+    <string name="write_storage_permission_message">Write External permission allows us  access to your media. Please allow in App Settings for additional functionality.</string>
+    <string name="read_storage_permission_message">Read External permission allows us to read your media. Please allow in App Settings for additional functionality.</string>
+    <string name="read_contacts_permission_message">Read Contacts permission allows us to read your contacts. Please allow in App Settings for additional functionality.</string>
+    <string name="write_contacts_permission_message">Write Contacts permission allows you access to your contacts. Please allow in App Settings for additional functionality.</string>
+    <string name="vibrate_permission_message">Vibrate permission . Please allow in App Settings for additional functionality.</string>
+    <string name="receive_sms_permission_message">Receive sms permission allows you  to receive SMS messages. Please allow in App Settings for additional functionality.</string>
+    <string name="read_sms_permission_message">Read sms permission allows us access to your SMS messages. Please allow in App Settings for additional functionality.</string>
+    <string name="call_phone_permission_message">Call phone permission allows you make calls. Please allow in App Settings for additional functionality.</string>
+    <string name="get_accounts_permission_message">Get accounts permission . Please allow in App Settings for additional functionality.</string>
+    <string name="write_sync_settings_permission_message">Write Sync settings permission . Please allow in App Settings for additional functionality.</string>
+    <string name="read_sync_settings_permission_message">Read Sync settings permission . Please allow in App Settings for additional functionality.</string>
+    <string name="location_permission">Location Permission</string>
+    <string name="location_permission_message">Location Permsission should be enabled to Share Location</string>
+    <string name="audios_directory">Audio</string>
+    <string name="share_btn">Share</string>
+    <string name="attach_gallery1">Gallery</string>
+    <string name="attach_music">Music</string>
+    <string name="attach_share">Share</string>
+
+    <string name="slide_to_cancel_audio">Slide To Cancel</string>
+
+    <string name="attach_contact">Contacts</string>
+    <string name="attach_video">Video</string>
+    <string name="attach_video_record">Record video</string>
+    <string name="attach_location">Location</string>
+    <string name="attach_audio">Audio</string>
+    <string name="attach_camera">Camera</string>
+    <string name="attach_gallery">Image</string>
+    <string name="attach_document">Document</string>
+
+    <string name="yes">Yes</string>
+    <string name="no_thanks">no</string>
+</resources>

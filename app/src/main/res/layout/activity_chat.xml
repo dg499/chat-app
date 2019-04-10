@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ededed">
+
+    <include
+        android:id="@+id/chat_app_bar"
+        layout="@layout/app_bar_layout" />
+
+    <!--  <android.support.v4.widget.SwipeRefreshLayout
+          android:id="@+id/message_swipe_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/linearLayout"
+          android:layout_alignParentStart="true"
+          android:layout_below="@+id/chat_app_bar">-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/messages_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_below="@+id/chat_app_bar"
+        android:layout_alignParentStart="true">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <io.codetail.widget.RevealFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/items_container"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingBottom="60dp"
+            android:gravity="bottom"
+            android:background="#b3000000">
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"  >
+                <LinearLayout
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/buttonbg"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:gravity="center"
+                        android:id="@+id/attach_share"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/darkColor"
+                            android:text="@string/attach_share" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:id="@+id/attach_camera"
+                        android:layout_marginStart="50dp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/slide_down_message_items"
+                            android:layout_height="@dimen/slide_down_message_items"
+                            android:layout_gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:background="@drawable/camera"
+                                android:layout_gravity="center"
+                                android:padding="14dp" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/attach_camera" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/attach_document"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginStart="50dp"
+                        android:padding="10dp"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/slide_down_message_items"
+                            android:layout_height="@dimen/slide_down_message_items"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/bg_attach_document">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_item_round_ripple"
+                                android:padding="16dp"
+                                app:srcCompat="@drawable/ic_insert_drive_file_white_48dp" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/attach_document" />
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/attach_image"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginStart="50dp"
+                        android:orientation="horizontal" >
+
+
+                        <FrameLayout
+                            android:layout_width="@dimen/slide_down_message_items"
+                            android:layout_height="@dimen/slide_down_message_items"
+                            android:layout_gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:background="@drawable/gallery1"
+                                android:padding="14dp"
+                                android:layout_gravity="center"/>
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="6dp"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/attach_gallery1" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/attach_record_video"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginStart="50dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:padding="10dp">
+
+
+                        <FrameLayout
+                            android:layout_width="@dimen/slide_down_message_items"
+                            android:layout_height="@dimen/slide_down_message_items"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/bg_attach_location">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_item_round_ripple"
+                                android:padding="16dp"
+                                app:srcCompat="@drawable/ic_attach_videocam_white_48dp" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="6dp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/attach_video_record" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/attach_audio"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginStart="50dp"
+                        android:orientation="horizontal" >
+
+                        <FrameLayout
+                            android:layout_width="@dimen/slide_down_message_items"
+                            android:layout_height="@dimen/slide_down_message_items"
+                            android:layout_gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:layout_gravity="center"
+                                android:padding="14dp"
+                                android:background="@drawable/music" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="6dp"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/attach_music" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/attach_contacts"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginStart="50dp"
+                        android:visibility="gone"
+                        android:orientation="horizontal" >
+
+                        <FrameLayout
+                            android:layout_width="@dimen/slide_down_message_items"
+                            android:layout_height="@dimen/slide_down_message_items"
+                            android:layout_gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:layout_gravity="center"
+                                android:padding="14dp"
+                                android:background="@drawable/contct" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="6dp"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/attach_contact" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/attach_location"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginStart="50dp"
+                        android:visibility="gone"
+                        android:orientation="horizontal" >
+
+                        <FrameLayout
+                            android:layout_width="@dimen/slide_down_message_items"
+                            android:layout_height="@dimen/slide_down_message_items"
+                            android:layout_gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:layout_gravity="center"
+                                android:padding="14dp"
+                                android:background="@drawable/location" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="6dp"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/attach_location" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/attach_video"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginStart="50dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:padding="10dp">
+
+
+                        <FrameLayout
+                            android:layout_width="@dimen/slide_down_message_items"
+                            android:layout_height="@dimen/slide_down_message_items"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/bg_attach_contact">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_item_round_ripple"
+                                android:padding="16dp"
+                                app:srcCompat="@drawable/ic_attach_video_white_48dp" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="6dp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/attach_video" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:visibility="gone"
+                        android:background="@drawable/above_shadow_rect" />
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonbg"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorRedDark"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/btn_close_images"
+                    android:text="Cancel"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </io.codetail.widget.RevealFrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageButton
+            android:id="@+id/chat_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:background="@android:color/white"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_add_black_24dp" />
+
+        <EditText
+            android:id="@+id/chat_message_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:hint="Enter Message..."
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="12dp" />
+
+        <com.android.chatapp.FrameLayoutFixed
+            android:id="@+id/record_panel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_rect_record_panel"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/slide_text_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="1dp"
+                    app:srcCompat="@drawable/ic_slider_gray_24dp" />
+
+                <TextView
+                    android:id="@+id/slideToCancelText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:textColor="@color/Colorgray"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/Colorwhite"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp">
+
+                <ImageButton
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="1dp"
+                    android:background="@color/Colorgray"
+                    app:srcCompat="@drawable/ic_mic_red_24dp" />
+
+                <TextView
+                    android:id="@+id/recording_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6dp"
+                    android:text="0:00"
+                    android:textColor="#4d4c4b"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </com.android.chatapp.FrameLayoutFixed>
+
+        <ImageButton
+            android:id="@+id/chat_send_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:background="@android:color/white"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_send_black_24dp" />
+        <TextView
+            android:id="@+id/tvPath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:text="Path:" />
+
+        <ImageButton
+            android:id="@+id/chat_audio_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:background="@android:color/white"
+            android:padding="10dp"
+            app:srcCompat="@drawable/audio_ic" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

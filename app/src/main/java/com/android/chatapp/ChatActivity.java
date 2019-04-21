@@ -378,9 +378,13 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                items_container.setVisibility(View.VISIBLE);
+                //items_container.setVisibility(View.VISIBLE);
                 // linearLayout.setVisibility(View.GONE);
+                Intent galleryIntent = new Intent();
+                galleryIntent.setType("image/*");
+                galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
 
+                startActivityForResult(Intent.createChooser(galleryIntent, "SELECT IMAGE"), GALLERY_PICK);
 
             }
         });

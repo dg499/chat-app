@@ -155,7 +155,8 @@ public class DashboardActivity extends AppCompatActivity
 
     private void sendToStart() {
 
-        AppHelper.LaunchActivityfinish(DashboardActivity.this, LoginActivity.class);
+        //AppHelper.LaunchActivityfinish(DashboardActivity.this, LoginActivity.class);
+        AppHelper.LaunchActivityfinish(DashboardActivity.this, SplashActivity.class);
 
 
     }

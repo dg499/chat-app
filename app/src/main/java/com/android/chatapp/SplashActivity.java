@@ -11,7 +11,7 @@ import com.google.firebase.database.DatabaseReference;
 public class SplashActivity extends AppCompatActivity {
 
 
-    private final int SPLASH_DISPLAY_LENGTH = 1500;
+    private final int SPLASH_DISPLAY_LENGTH = 3000;
     private DatabaseReference mUserDatabase;
 
     private FirebaseAuth mAuth;
@@ -24,14 +24,15 @@ public class SplashActivity extends AppCompatActivity {
 
         try {
             FirebaseUser currentUser = mAuth.getCurrentUser();
-
             if (currentUser != null) {
 
                 mUserDatabase.child("online");
+                wait(3000);
                 AppHelper.LaunchActivityfinish(SplashActivity.this, DashboardActivity.class);
 
             } else {
 
+                wait(3000);
                 AppHelper.LaunchActivityfinish(SplashActivity.this, LoginActivity.class);
 
             }

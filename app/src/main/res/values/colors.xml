@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#59B953</color>
-    <color name="colorPrimaryDark">#227706</color>
-    <color name="colorPrimaryD">#369616</color>
-    <color name="colorAccent">#ff5521</color>
+    <color name="colorPrimary">#D22630</color>
+    <color name="colorPrimaryDark">#D22630</color>
+    <color name="colorPrimaryD">#f11409</color>
+    <color name="colorAccent">#f11409</color>
     <color name="darkColor">#222222</color>
     <color name="Colorblck">#222222</color>
     <color name="Colorwhite">#ffffff</color>
@@ -11,7 +11,7 @@
     <color name="Colorgraydark">#3A3838</color>
     <color name="colorRedDark">#f11409</color>
     <color name="transparent">#00000000</color>
-    <color name="colorGreenProgressBars">#25d366</color>
+    <color name="colorGreenProgressBars">#f11409</color>
 
     <color name="colorBlueLight">#03A9F4</color>
     <color name="colorBlueLightSearch">#03A9F4</color>
@@ -25,6 +25,7 @@
     <color name="colorGrayDarkerBar">#455A64</color>
     <color name="colorGrayLight">#EAEAEA</color>
     <color name="colorHanBlue">#446CCF</color>
+    <color name="colorDarkBlue">#1D3AA8</color>
 
     <color name="colorUnSelected">#70ffffff</color>
     <color name="colorRightBubble">#dcf8c6</color>

@@ -26,30 +26,53 @@
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
-        <RelativeLayout
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="20dp">
+            android:gravity="bottom"
 
-            <ImageView
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/bungee"
+            android:layout_gravity="center_horizontal"
+            android:text="HIGHLANDER SOCIAL"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="28sp"
+            android:textStyle="bold|italic" />
+        <ImageView
                 android:id="@+id/image"
                 android:layout_width="160dp"
-                android:layout_height="120dp"
-                android:background="@drawable/logonew"
-                android:backgroundTint="@color/colorPrimaryDark" />
+                android:layout_height="160dp"
+                android:background="@drawable/highlanderlogo"/>
 
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:text="@string/app_name"
+                android:text="Register to "
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:textStyle="bold|italic" />
-        </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="Connect"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/register_display_name"

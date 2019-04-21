@@ -20,36 +20,47 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:orientation="vertical"
         android:layout_gravity="center_horizontal"
         tools:ignore="MissingConstraints">
 
-        <RelativeLayout
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="center">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="bottom"
+            android:text="Stay Connected with"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/bungee"
+            android:layout_gravity="center_horizontal"
+            android:text="HIGHLANDER SOCIAL"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="28sp"
+            android:textStyle="bold|italic" />
 
             <ImageView
                 android:id="@+id/image"
-                android:layout_width="160dp"
-                android:layout_height="120dp"
-                android:backgroundTint="@color/colorPrimaryDark"
-                android:background="@drawable/logonew" />
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="5dp"
+                android:adjustViewBounds="false"
+                android:background="@drawable/highlanderlogo"
+                android:gravity="bottom"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:gravity="center"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="40dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
-                android:textStyle="bold|italic" />
-        </RelativeLayout>
+                android:cropToPadding="false"
+                android:visibility="visible" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -123,7 +134,7 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/button_bck_bg"
                 android:gravity="center"
                 android:paddingLeft="30dp"

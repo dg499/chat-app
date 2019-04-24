@@ -11,7 +11,12 @@ import android.view.animation.Transformation;
 import java.lang.ref.WeakReference;
 import java.util.WeakHashMap;
 
-
+/**
+ * Created by Abderrahim El imame on 7/31/16.
+ *
+ * @Email : abderrahim.elimame@gmail.com
+ * @Author : https://twitter.com/bencherif_el
+ */
 public class ViewAudioAnimation extends Animation {
     private static final WeakHashMap<View, ViewAudioAnimation> PROXIES = new WeakHashMap<View, ViewAudioAnimation>();
     public static boolean NEED_PROXY = Build.VERSION.SDK_INT < 11;

@@ -2,6 +2,12 @@ package com.android.chatapp.animations;
 
 import android.view.View;
 
+/**
+ * Created by Abderrahim El imame on 7/31/16.
+ *
+ * @Email : abderrahim.elimame@gmail.com
+ * @Author : https://twitter.com/bencherif_el
+ */
 public class ViewAudioProxy {
     public static float getAlpha(View view) {
         if (ViewAudioAnimation.NEED_PROXY) {

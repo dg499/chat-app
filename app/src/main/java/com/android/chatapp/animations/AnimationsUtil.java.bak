@@ -21,7 +21,10 @@ import android.view.animation.AnimationUtils;
 import com.android.chatapp.AppHelper;
 import com.android.chatapp.R;
 
-
+/**
+ * Created by Abderrahim El imame on 26/03/2016.
+ * Email : abderrahim.elimame@gmail.com
+ */
 public class AnimationsUtil {
     // To reveal a previously invisible view using this effect:
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)

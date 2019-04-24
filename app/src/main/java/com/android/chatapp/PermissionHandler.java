@@ -14,7 +14,6 @@ class PermissionHandler {
     public static final int PERMISSION_REQUEST_CODE = 0x009;
     public static final int CONTACTS_PERMISSION_REQUEST_CODE = 0x009;
     public static final int SELECT_ADD_NEW_CONTACT = 0x010;
-
     public static boolean checkPermission(Activity activity, String permission) {
         if (AppHelper.isAndroid6()) {
             int result = ContextCompat.checkSelfPermission(activity, permission);
@@ -23,14 +22,11 @@ class PermissionHandler {
             return true;
         }
     }
-
     public static void requestPermission(Activity mActivity, String permission) {
-
         if (ActivityCompat.shouldShowRequestPermissionRationale(mActivity, permission)) {
             String title = null;
             String Message = null;
             switch (permission) {
-
                 case Manifest.permission.RECORD_AUDIO:
                     title = mActivity.getString(R.string.audio_permission);
                     Message = mActivity.getString(R.string.record_audio_permission_message);
@@ -59,12 +55,10 @@ class PermissionHandler {
                     title = mActivity.getString(R.string.contacts_permission);
                     Message = mActivity.getString(R.string.write_contacts_permission_message);
                     break;
-
                 case Manifest.permission.RECEIVE_SMS:
                     title = mActivity.getString(R.string.receive_sms_permission);
                     Message = mActivity.getString(R.string.receive_sms_permission_message);
                     break;
-
                 case Manifest.permission.READ_SMS:
                     title = mActivity.getString(R.string.read_sms_permission);
                     Message = mActivity.getString(R.string.read_sms_permission_message);
@@ -77,9 +71,7 @@ class PermissionHandler {
                     title = mActivity.getString(R.string.get_accounts_permission);
                     Message = mActivity.getString(R.string.get_accounts_permission_message);
                     break;
-
             }
-
             AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
             builder.setTitle(title);
             builder.setMessage(Message);
@@ -95,7 +87,6 @@ class PermissionHandler {
             });
             builder.setNegativeButton(R.string.no_thanks, (dialog, which) -> {
                 if (permission.equals(Manifest.permission.READ_CONTACTS)) {
-
                     dialog.dismiss();
                 } else {
                     dialog.dismiss();
@@ -110,6 +101,4 @@ class PermissionHandler {
             }
         }
     }
-
-
 }

@@ -12,4 +12,4 @@ The App is Still work in progress so this may contain some errors. The source co
 
 ## Updates
 
-[ 10 Apr, 2019 ] - First Upload With Basic Funcitonality
+[ 23 Apr, 2019 ] - Reformatted code and fixed Bugs related to Audio Functionality

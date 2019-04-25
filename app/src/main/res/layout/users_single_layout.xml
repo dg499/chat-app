@@ -34,6 +34,16 @@
         android:layout_below="@+id/user_single_name"
         android:layout_marginTop="6dp"
         android:text="User default Status" />
+    <TextView
+        android:id="@+id/user_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/user_single_name"
+        android:paddingRight="25dp"
+        android:visibility="gone"
+        android:layout_alignRight="@+id/user_single_name"
+        android:text="date" />
     <ImageView
         android:id="@+id/user_image"
         android:layout_width="wrap_content"
@@ -41,6 +51,15 @@
         android:layout_alignStart="@+id/user_single_name"
         android:layout_below="@+id/user_single_name"
         android:src="@drawable/ic_camera_blck"
+        android:visibility="gone"
+        android:layout_marginTop="10dp" />
+    <ImageView
+        android:id="@+id/audiofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/user_single_name"
+        android:layout_below="@+id/user_single_name"
+        android:src="@drawable/audio_ic"
         android:visibility="gone"
         android:layout_marginTop="10dp" />
 

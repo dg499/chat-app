@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/message_single_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -52,8 +53,8 @@
 
     <ImageView
         android:id="@+id/message_image_layout"
-        android:layout_width="60dp"
-        android:layout_height="160dp"
+        android:layout_width="40dp"
+        android:layout_height="140dp"
         android:layout_alignParentEnd="true"
         android:layout_alignStart="@+id/message_text_layout"
         android:layout_below="@+id/message_text_layout"
@@ -69,11 +70,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:orientation="horizontal"
-        android:paddingBottom="18dp"
+        android:padding="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="30dp"
+        android:background="@color/Colorgray"
         android:layout_toEndOf="@+id/message_profile_layout"
         android:layout_marginTop="15dp"
         android:layout_below="@+id/message_image_layout"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <FrameLayout
             android:layout_width="wrap_content"
@@ -88,8 +92,8 @@
                 android:background="@drawable/bg_circle_image_holder" />
 
             <LinearLayout
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_gravity="bottom|right"
                 android:background="@drawable/bg_mic_white">
 
@@ -98,12 +102,9 @@
                     android:layout_height="wrap_content">
 
                     <ImageButton
-                        android:layout_width="wrap_content"
+                        android:layout_width="25dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginTop="3dp"
+                        android:layout_marginTop="5dp"
                         android:background="@drawable/bg_circle_image_holder_white"
                         app:srcCompat="@drawable/ic_audio_blue_24dp" />
 
@@ -112,6 +113,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginBottom="2dp"
+                        android:visibility="gone"
                         android:background="@color/transparent"
                         app:srcCompat="@drawable/ic_mic_blue_24dp" />
                 </FrameLayout>
@@ -131,104 +133,104 @@
                 android:layout_marginLeft="6dp"
                 android:layout_marginRight="6dp">
 
+                <!--
+                                <ProgressBar
+                                    android:id="@+id/progress_bar_upload_audio_init"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:visibility="gone" />
 
-                <ProgressBar
-                    android:id="@+id/progress_bar_upload_audio_init"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:visibility="gone" />
-
-                <ProgressBar
-                    android:id="@+id/progress_bar_upload_audio"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:max="100"
-                    android:padding="3dp"
-                    android:progress="0"
-                    android:progressDrawable="@drawable/bg_circle_audio_progress"
-                    android:visibility="gone" />
-
-
-                <ImageButton
-                    android:id="@+id/cancel_upload_audio"
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_gravity="center"
-                    android:background="@color/transparent"
-                    android:gravity="center"
-                    android:padding="2dp"
-                    android:visibility="gone"
-                    app:srcCompat="@drawable/ic_close_gary_24dp" />
-
-                <LinearLayout
-                    android:id="@+id/retry_upload_audio"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/bg_circle_audio_progress_bar"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:padding="2dp"
-                    android:visibility="gone">
-
-                    <ImageButton
-                        android:id="@+id/retry_upload_audio_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/transparent"
-                        android:clickable="true"
-                        android:padding="3dp"
-                        app:srcCompat="@drawable/ic_file_upload_gray_24dp" />
-                </LinearLayout>
-
-                <ProgressBar
-                    android:id="@+id/progress_bar_download_audio_init"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:visibility="gone" />
-
-                <ProgressBar
-                    android:id="@+id/progress_bar_download_audio"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:max="100"
-                    android:progress="0"
-                    android:progressDrawable="@drawable/bg_circle_progress"
-                    android:visibility="gone" />
+                                <ProgressBar
+                                    android:id="@+id/progress_bar_upload_audio"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:max="100"
+                                    android:padding="3dp"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/bg_circle_audio_progress"
+                                    android:visibility="gone" />
 
 
-                <ImageButton
-                    android:id="@+id/cancel_download_audio"
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_gravity="center"
-                    android:background="@color/transparent"
-                    android:gravity="center"
-                    android:visibility="gone"
-                    app:srcCompat="@drawable/ic_close_gary_24dp" />
+                                <ImageButton
+                                    android:id="@+id/cancel_upload_audio"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/transparent"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/ic_close_gary_24dp" />
 
-                <LinearLayout
-                    android:id="@+id/retry_download_audio"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="bottom|right"
-                    android:background="@drawable/bg_circle_audio_progress_bar"
-                    android:padding="2dp"
-                    android:visibility="gone">
+                                <LinearLayout
+                                    android:id="@+id/retry_upload_audio"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/bg_circle_audio_progress_bar"
+                                    android:clickable="true"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:visibility="gone">
 
-                    <ImageButton
-                        android:id="@+id/retry_download_audio_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/transparent"
-                        android:padding="3dp"
-                        app:srcCompat="@drawable/ic_file_upload_gray_24dp" />
-                </LinearLayout>
+                                    <ImageButton
+                                        android:id="@+id/retry_upload_audio_button"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/transparent"
+                                        android:clickable="true"
+                                        android:padding="3dp"
+                                        app:srcCompat="@drawable/ic_file_upload_gray_24dp" />
+                                </LinearLayout>
+
+                                <ProgressBar
+                                    android:id="@+id/progress_bar_download_audio_init"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:visibility="gone" />
+
+                                <ProgressBar
+                                    android:id="@+id/progress_bar_download_audio"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/bg_circle_progress"
+                                    android:visibility="gone" />
+
+
+                                <ImageButton
+                                    android:id="@+id/cancel_download_audio"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/transparent"
+                                    android:gravity="center"
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/ic_close_gary_24dp" />
+
+                                <LinearLayout
+                                    android:id="@+id/retry_download_audio"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="bottom|right"
+                                    android:background="@drawable/bg_circle_audio_progress_bar"
+                                    android:padding="2dp"
+                                    android:visibility="gone">
+
+                                    <ImageButton
+                                        android:id="@+id/retry_download_audio_button"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/transparent"
+                                        android:padding="3dp"
+                                        app:srcCompat="@drawable/ic_file_upload_gray_24dp" />
+                                </LinearLayout>-->
 
                 <FrameLayout
                     android:layout_width="wrap_content"
@@ -260,16 +262,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
+                android:layout_gravity="center"
                 android:orientation="vertical">
 
                 <SeekBar
                     android:id="@+id/audio_progress_bar"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="-10dp"
-                    android:layout_marginLeft="-10dp"
-                    android:layout_marginRight="-10dp" />
+
+                    android:layout_height="wrap_content" />
 
                 <!-- Timer Display -->
                 <FrameLayout

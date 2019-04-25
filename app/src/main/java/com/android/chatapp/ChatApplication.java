@@ -12,16 +12,12 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.OkHttpDownloader;
 import com.squareup.picasso.Picasso;
 
-
 public class ChatApplication extends Application {
-
     private DatabaseReference mUserDatabase;
     private FirebaseAuth mAuth;
-
     @Override
     public void onCreate() {
         super.onCreate();
-
         try {
             FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         } catch (Exception e) {
@@ -29,43 +25,27 @@ public class ChatApplication extends Application {
         }
 
         /* Picasso */
-
         Picasso.Builder builder = new Picasso.Builder(this);
         builder.downloader(new OkHttpDownloader(this, Integer.MAX_VALUE));
         Picasso built = builder.build();
         built.setIndicatorsEnabled(true);
         built.setLoggingEnabled(true);
         Picasso.setSingletonInstance(built);
-
         mAuth = FirebaseAuth.getInstance();
-
         if (mAuth.getCurrentUser() != null) {
-
             mUserDatabase = FirebaseDatabase.getInstance()
                     .getReference().child("Users").child(mAuth.getCurrentUser().getUid());
-
             mUserDatabase.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
-
                     if (dataSnapshot != null) {
-
                         mUserDatabase.child("online").onDisconnect().setValue(ServerValue.TIMESTAMP);
-
                     }
-
                 }
-
                 @Override
                 public void onCancelled(DatabaseError databaseError) {
-
                 }
             });
-
         }
-
-
     }
-
-
 }
